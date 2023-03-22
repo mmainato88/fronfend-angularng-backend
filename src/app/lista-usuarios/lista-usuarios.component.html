@@ -1,0 +1,24 @@
+<p>lista-usuarios works!</p>
+<h2>Datos de los usuarios</h2>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>telefono</th>
+            <th>email</th>
+            <th>password</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let usuario of usuarios">
+            <td>{{usuario.id}}</td>
+            <td>{{usuario.nombre}}</td>
+            <td>{{usuario.apellido}}</td>
+            <td>{{usuario.telefono}}</td>
+            <td>{{usuario.email}}</td>
+            <td>{{usuario.password}}</td>
+        </tr>
+    </tbody>
+</table>
