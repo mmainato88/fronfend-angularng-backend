@@ -40,4 +40,11 @@ export class ListaUsuariosComponent implements OnInit {
       this.usuarios = dato;
     });
   }
+
+  eliminarUsuario(id:number){
+    this.usuarioServicio.eliminarUsuario(id).subscribe(dato=>{
+      console.log(dato);
+      this.obtenerUsarios();
+    });
+  }
 }

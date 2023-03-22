@@ -23,4 +23,8 @@ export class UsuarioService {
     return this.httpClient.post(`${this.baseURL}`,usuario);
   }
 
+
+  eliminarUsuario(id:number):Observable<object>{
+    return this.httpClient.delete(`${this.baseURL}/${id}`);
+  }
 }

@@ -9,6 +9,7 @@
             <th>telefono</th>
             <th>email</th>
             <th>password</th>
+            <th>acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -19,6 +20,17 @@
             <td>{{usuario.telefono}}</td>
             <td>{{usuario.email}}</td>
             <td>{{usuario.password}}</td>
+            <td>
+                <button  class="btn btn-info">
+                    Actualizar
+                </button>
+                <button (click)="eliminarUsuario(usuario.id)" class="btn btn-info">
+                    Eliminar
+                </button>
+            </td>
+        </tr>
+        <tr>
+
         </tr>
     </tbody>
 </table>
