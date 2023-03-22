@@ -18,4 +18,9 @@ export class UsuarioService {
     //Observable es un patron de diseño
     return this.httpClient.get<Usuario[]>(`${this.baseURL}`);
   }
+  //este metodo nos sirve para registrar un empleado
+  registrarUsuario(usuario:Usuario) : Observable<Object>{
+    return this.httpClient.post(`${this.baseURL}`,usuario);
+  }
+
 }

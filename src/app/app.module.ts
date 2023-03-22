@@ -5,16 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaUsuariosComponent
+    ListaUsuariosComponent,
+    RegistrarUsuarioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
