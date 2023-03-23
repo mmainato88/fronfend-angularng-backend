@@ -1,4 +1,3 @@
-<p>lista-usuarios works!</p>
 <h2>Datos de los usuarios</h2>
 <table class="table table-striped">
     <thead class="table-dark">
@@ -21,16 +20,16 @@
             <td>{{usuario.email}}</td>
             <td>{{usuario.password}}</td>
             <td>
-                <button  class="btn btn-info">
+                <button (click)="actualizarUsuario(usuario.id)" class="btn btn-info">
                     Actualizar
                 </button>
-                <button (click)="eliminarUsuario(usuario.id)" class="btn btn-info">
+                <button (click)="eliminarUsuario(usuario.id)" class="btn btn-danger">
                     Eliminar
                 </button>
+                <button (click)= "verDetallesDelUsuario(usuario.id)" class="btn btn-primary">
+                    Ver
+                </button>
             </td>
-        </tr>
-        <tr>
-
         </tr>
     </tbody>
 </table>

@@ -27,4 +27,14 @@ export class UsuarioService {
   eliminarUsuario(id:number):Observable<object>{
     return this.httpClient.delete(`${this.baseURL}/${id}`);
   }
+
+  //este metodo sirve para obtener o buscar un usuario
+  obtenerUsuarioPorId(id:number):Observable<Usuario>{
+    return this.httpClient.get<Usuario>(`${this.baseURL}/${id}`);
+  }
+
+  //este metodo sirve para actualizar el usuario
+  actualizarUsuario(id:number,usuario:Usuario) : Observable<Object>{
+    return this.httpClient.put(`${this.baseURL}/${id}`,usuario);
+  }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../usuario';
 import { UsuarioService } from '../usuario.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lista-usuarios',
@@ -10,7 +11,11 @@ import { UsuarioService } from '../usuario.service';
 export class ListaUsuariosComponent implements OnInit {
 
   //En el constructor inyectamos
-  constructor(private usuarioServicio: UsuarioService) { }
+  constructor(
+    private usuarioServicio: UsuarioService,
+    private ruoter: Router) {
+
+  }
 
   usuarios: Usuario[];
 
@@ -41,10 +46,16 @@ export class ListaUsuariosComponent implements OnInit {
     });
   }
 
-  eliminarUsuario(id:number){
-    this.usuarioServicio.eliminarUsuario(id).subscribe(dato=>{
+  eliminarUsuario(id: number) {
+    this.usuarioServicio.eliminarUsuario(id).subscribe(dato => {
       console.log(dato);
       this.obtenerUsarios();
     });
+  }
+  verDetallesDelUsuario(id: number) {
+    this.ruoter.navigate(['detalle-usuario',id]);
+  }
+  actualizarUsuario(id:number){
+    this.ruoter.navigate(['actualizar-usuario',id]);
   }
 }

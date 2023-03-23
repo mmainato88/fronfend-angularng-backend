@@ -1,0 +1,31 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Edición de empleado</h3>
+    <form (ngSubmit)="onSubmit()" #usuarioForm="ngForm">
+        <div class="form-group">
+            <label>Nombre : </label>
+            <input type="text" class="form-control" id="nombre" [(ngModel)]="usuario.nombre" name="nombre" required
+                #nombre="ngModel" />
+        </div>
+        <div class="form-group">
+            <label>Apellido : </label>
+            <input type="text" class="form-control" id="apellido" [(ngModel)]="usuario.apellido" name="apellido"
+                required #apellido="ngModel" />
+        </div>
+        <div class="form-group">
+            <label>Telefono : </label>
+            <input type="text" class="form-control" id="telefono" [(ngModel)]="usuario.telefono" name="telefono"
+                required #telefono="ngModel" />
+        </div>
+        <div class="form-group">
+            <label>Email : </label>
+            <input type="text" class="form-control" id="email" [(ngModel)]="usuario.email" name="email" required
+                #email="ngModel" />
+        </div>
+        <div class="form-group">
+            <label>Password : </label>
+            <input type="password" class="form-control" id="password" [(ngModel)]="usuario.password" name="password"
+                required #password="ngModel" />
+        </div>
+        <button class="btn btn-success" >Guardar</button>
+    </form>
+</div>

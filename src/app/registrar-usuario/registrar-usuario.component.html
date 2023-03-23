@@ -1,6 +1,6 @@
 <div class="col-md-6 offset-md-3">
     <h3 class="text-center">Registro de usuario</h3>
-    <form (ngSubmit)="onSubmit()" #empleadoForm="ngForm">
+    <form (ngSubmit)="onSubmit()" #usuarioForm="ngForm">
         <div class="form-group">
             <label>Nombre : </label>
             <input type="text" class="form-control" id="nombre" [(ngModel)]="usuario.nombre" name="nombre"
@@ -15,10 +15,9 @@
             <input type="text" class="form-control" id="email" [(ngModel)]="usuario.email" name="email"
                 placeholder="Digite su email " />
                 <label>Password : </label>
-            <input type="text" class="form-control" id="password" [(ngModel)]="usuario.password" name="password"
+            <input type="password" class="form-control" id="password" [(ngModel)]="usuario.password" name="password"
                 placeholder="Digite su password " />
         </div>
-
         <button class="btn btn-success" >Guardar</button>
     </form>
 </div>
